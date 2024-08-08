@@ -21,7 +21,16 @@
    * On top of grabbing the "count" and "button" elements by their id, you will need to keep track of some variable
    * representing the current value in your code.
    */
+  var newCount = document.getElementById("count");
+  var button = document.getElementById("button");
   var currentCount = 0;
+
+  button.onclick = buttonclicked;
+  function buttonclicked() {
+    currentCount += 1;
+    newCount.innerText = currentCount;
+    button.innerText = "click me again";
+  }
 </script>
 </body>
 </html>

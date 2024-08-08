@@ -37,7 +37,6 @@
           //set the initial value of lightOn
           var lightOn = false;
           switchButton.onclick = switchLight;
-          checkButton.onclick = checkLight;
           function switchLight() {
               //switch lightOn to the opposite of lightOn
               lightOn = !lightOn;
@@ -46,8 +45,14 @@
            * TODO: if lightOn is true, set the innerText of lightText to "the light is on."
            * if lightOn is false, set the innerText of lightText to "the light is off."
            */
-          function checkLight(){
-
+          checkButton.onclick = checkLight;
+          function checkLight() {
+              //changes the innerText of lightText depending on if lightOn is true or false
+              if(lightOn == true){
+                lightText.innerText = "the light is on.";
+              }else if(lightOn == false){
+                lightText.innerText = "the light is off.";
+              }
           }
 
       </script>

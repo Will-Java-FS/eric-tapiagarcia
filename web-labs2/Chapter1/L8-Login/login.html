@@ -31,5 +31,20 @@
          * and the password is "password".
          */
     //    code here, inside the script tag
+    
+    var message = document.getElementById("loginMessage");
+    var loginButton = document.getElementById("loginButton");
+
+    loginButton.onclick = login;
+    function login(){
+        var username = document.getElementById("usernameInput");
+        var password = document.getElementById("passwordInput");
+        if(username.value == "user" && password.value == "password"){
+            message.innerText = "welcome, user!";
+        }else{
+            message.innerText = "login unsuccessful, please try again"
+        }
+    }
+
     </script>
 </body>
